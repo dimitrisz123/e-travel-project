@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+import TitleList from "./title-list/title-list";
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      starWars: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://star-wars-api.herokuapp.com/films")
+      .then(response => response.json())
+      .then(data => this.setState({ starWars: data }))
+      .catch(err => console.log("Error"));
+  }
+
+  render() {
+    const { starWars } = this.state;
+
+    return <TitleList starWars={starWars} />;
+  }
 }
 
 export default App;
