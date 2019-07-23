@@ -7,7 +7,6 @@ const MovieSummary = ({ details, noDetails }) => {
 		return (
 			<div>
 				{details.map(info => {
-					console.log(info);
 					return <p key={info.id}>{info.fields.opening_crawl}</p>;
 				})}
 			</div>

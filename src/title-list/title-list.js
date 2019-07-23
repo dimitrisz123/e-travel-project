@@ -4,10 +4,10 @@ import Title from "../title/title";
 
 import "./title-list.css";
 
-const TitleList = ({ starWars, movieTitleHandler }) => {
+const TitleList = ({ movieTitleHandler, filteredTitle }) => {
 	return (
 		<div className="title-list">
-			{starWars.map(data => {
+			{filteredTitle.map(data => {
 				const { episode_id, title } = data.fields;
 
 				return (
