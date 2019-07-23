@@ -9,7 +9,7 @@ class App extends React.Component {
     super();
     this.state = {
       starWars: [],
-      movieSummary: ""
+      movieTitle: ""
     };
   }
 
@@ -21,23 +21,29 @@ class App extends React.Component {
   }
 
   movieTitleHandler = title => {
-    this.setState({ movieSummary: title });
+    this.setState({ movieTitle: title });
   };
 
   render() {
-    const { starWars, movieSummary } = this.state;
+    const { starWars, movieTitle } = this.state;
 
     const movieDetails = starWars.filter(opening => {
-      return opening.fields.title.includes(movieSummary);
+      return opening.fields.title.includes(movieTitle);
     });
 
+    console.log(movieDetails);
+
     return (
-      <div>
+      <div className="main-app">
         <TitleList
           starWars={starWars}
           movieTitleHandler={this.movieTitleHandler}
         />
-        <MovieSummary details={movieDetails} />
+        {!movieTitle ? (
+          <MovieSummary noDetails />
+        ) : (
+          <MovieSummary details={movieDetails} />
+        )}
       </div>
     );
   }
