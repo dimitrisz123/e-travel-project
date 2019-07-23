@@ -2,9 +2,11 @@ import React from "react";
 
 import Title from "../title/title";
 
+import "./title-list.css";
+
 const TitleList = ({ starWars, movieTitleHandler }) => {
 	return (
-		<div>
+		<div className="title-list">
 			{starWars.map(data => {
 				const { episode_id, title } = data.fields;
 

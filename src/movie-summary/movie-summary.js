@@ -2,7 +2,6 @@ import React from "react";
 
 const MovieSummary = ({ details, noDetails }) => {
 	if (noDetails) {
-		console.log("works");
 		return <p>No Movies Selected</p>;
 	} else {
 		return (
