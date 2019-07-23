@@ -2,12 +2,14 @@ import React from "react";
 
 import "./App.css";
 import TitleList from "./title-list/title-list";
+import MovieSummary from "./movie-summary/movie-summary";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      starWars: []
+      starWars: [],
+      movieSummary: ""
     };
   }
 
@@ -18,10 +20,26 @@ class App extends React.Component {
       .catch(err => console.log("Error"));
   }
 
-  render() {
-    const { starWars } = this.state;
+  movieTitleHandler = title => {
+    this.setState({ movieSummary: title });
+  };
 
-    return <TitleList starWars={starWars} />;
+  render() {
+    const { starWars, movieSummary } = this.state;
+
+    const movieDetails = starWars.filter(opening => {
+      return opening.fields.title.includes(movieSummary);
+    });
+
+    return (
+      <div>
+        <TitleList
+          starWars={starWars}
+          movieTitleHandler={this.movieTitleHandler}
+        />
+        <MovieSummary details={movieDetails} />
+      </div>
+    );
   }
 }
 
