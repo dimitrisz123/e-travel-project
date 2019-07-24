@@ -4,6 +4,7 @@ import "./App.css";
 import TitleList from "./title-list/title-list";
 import MovieSummary from "./movie-summary/movie-summary";
 import Search from "./search/search";
+import Sorting from "./sorting/sorting";
 
 class App extends React.Component {
   constructor() {
@@ -11,7 +12,8 @@ class App extends React.Component {
     this.state = {
       starWars: [],
       movieTitle: "",
-      movieSearch: ""
+      movieSearch: "",
+      sortMoviesBy: ""
     };
   }
 
@@ -30,21 +32,53 @@ class App extends React.Component {
     this.setState({ movieSearch: value });
   };
 
+  movieSortingHandler = value => {
+    this.setState({ sortMoviesBy: value });
+  };
+
+  sortMoviesByYear = (a, b) => {
+    return a.fields.release_date - b.fields.release_date;
+  };
+
+  sortMoviesByEpisode = (a, b) => {
+    return a.fields.episode_id - b.fields.episode_id;
+  };
+
   render() {
-    const { starWars, movieTitle, movieSearch } = this.state;
+    const { starWars, movieTitle, movieSearch, sortMoviesBy } = this.state;
 
     const movieDetails = starWars.filter(opening => {
       return opening.fields.title.includes(movieTitle);
     });
 
-    const filteredTitle = starWars.filter(movie => {
+    let filteredTitle = starWars.filter(movie => {
       return movie.fields.title
         .toLowerCase()
         .includes(movieSearch.toLowerCase());
     });
 
+    if (sortMoviesBy === "year") {
+      filteredTitle = starWars
+        .filter(movie => {
+          return movie.fields.title
+            .toLowerCase()
+            .includes(movieSearch.toLowerCase());
+        })
+        .sort(this.sortMoviesByYear);
+    } else if (sortMoviesBy === "episode") {
+      filteredTitle = starWars
+        .filter(movie => {
+          return movie.fields.title
+            .toLowerCase()
+            .includes(movieSearch.toLowerCase());
+        })
+        .sort(this.sortMoviesByEpisode);
+    }
+    console.log(filteredTitle);
+
     return (
       <div>
+        <Sorting movieSortingHandler={this.movieSortingHandler} />
         <Search movieSearchHandler={this.movieSearchHandler} />
         <div className="main-app">
           <TitleList
