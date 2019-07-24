@@ -1,14 +1,19 @@
 import React from "react";
 
-const Title = ({ title, movieTitleHandler }) => {
+import "./title.css";
+
+const Title = ({ title, movieTitleHandler, releaseDate, episodeNumber }) => {
 	return (
-		<p
+		<button
+			className="title"
 			onClick={() => {
 				movieTitleHandler(title);
 			}}
 		>
-			{title}
-		</p>
+			<span>EPISODE: {episodeNumber}</span>
+			<span>{title}</span>
+			<span>{releaseDate}</span>
+		</button>
 	);
 };
 

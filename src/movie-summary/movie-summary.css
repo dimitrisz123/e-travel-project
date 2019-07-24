@@ -1,0 +1,9 @@
+.summary-wrapper {
+	flex: 0 1 auto;
+}
+
+.summary {
+	width: 80%;
+	margin: 20px auto;
+	padding: 0px 50px;
+}

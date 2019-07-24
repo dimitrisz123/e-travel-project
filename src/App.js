@@ -78,8 +78,10 @@ class App extends React.Component {
 
     return (
       <div>
-        <Sorting movieSortingHandler={this.movieSortingHandler} />
-        <Search movieSearchHandler={this.movieSearchHandler} />
+        <div className="header">
+          <Sorting movieSortingHandler={this.movieSortingHandler} />
+          <Search movieSearchHandler={this.movieSearchHandler} />
+        </div>
         <div className="main-app">
           <TitleList
             movieTitleHandler={this.movieTitleHandler}

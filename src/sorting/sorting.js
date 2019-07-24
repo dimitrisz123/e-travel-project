@@ -1,8 +1,11 @@
 import React from "react";
 
+import "./sorting.css";
+
 const Sorting = ({ movieSortingHandler }) => {
 	return (
 		<select
+			className="sorting"
 			id="sort-by"
 			onChange={e => movieSortingHandler(e.target.value)}
 		>

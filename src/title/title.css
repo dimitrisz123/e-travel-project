@@ -1,0 +1,13 @@
+.title {
+	height: 3rem;
+	border: none;
+	border-bottom: 1px solid #b4bcbf;
+	background-color: #dfe6e9;
+}
+
+.title:hover,
+.title:active,
+.title:focus,
+.title:visited {
+	background-color: #ffffff;
+}
