@@ -28,3 +28,24 @@
 .summary-opening_crawl {
 	margin-bottom: 1rem;
 }
+
+@media (max-width: 1274px) {
+	.summary-wrapper {
+		width: 80%;
+	}
+	.summary-title {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 980px) {
+	.summary-wrapper {
+		font-size: 0.9rem;
+	}
+	.summary-title {
+		font-size: 1rem;
+	}
+}
+
+
+

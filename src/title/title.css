@@ -21,3 +21,20 @@
 .movie-name {
 	margin: 0 auto 0 50px;
 }
+@media (max-width: 980px) {
+	.title-inner {
+		font-size: 0.7rem;
+	}
+}
+
+@media (max-width: 844px) {
+	.movie-name {
+		margin: 0 auto 0 20px;
+	}
+}
+
+@media (max-width: 798px) {
+	.title-inner {
+		font-size: 0.4rem;
+	}
+}

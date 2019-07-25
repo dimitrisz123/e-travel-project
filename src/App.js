@@ -76,7 +76,6 @@ class App extends React.Component {
         })
         .sort(this.sortMoviesByEpisode);
     }
-    console.log(filteredTitle);
 
     return (
       <div>
