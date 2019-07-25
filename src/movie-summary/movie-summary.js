@@ -5,18 +5,25 @@ import "./movie-summary.css";
 const MovieSummary = ({ details, noDetails }) => {
 	if (noDetails) {
 		return (
-			<div className="summary-wrapper">
-				<p className="summary">No Movies Selected</p>
+			<div className="summary-wrapper-default">
+				<p className="summary-default">No Movies Selected</p>
 			</div>
 		);
 	} else {
 		return (
-			<div className="summary-wrapper">
+			<div>
 				{details.map(info => {
+					const { title, opening_crawl, director } = info.fields;
 					return (
-						<p className="summary" key={info.id}>
-							{info.fields.opening_crawl}
-						</p>
+						<div className="summary-wrapper" key={info.id}>
+							<p className="summary-title">{title}</p>
+							<p className="summary-opening_crawl">
+								{opening_crawl}
+							</p>
+							<p className="summary-director">
+								Directed by: {director}
+							</p>
+						</div>
 					);
 				})}
 			</div>
