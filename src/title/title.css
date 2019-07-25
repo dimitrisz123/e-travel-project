@@ -11,3 +11,13 @@
 .title:visited {
 	background-color: #ffffff;
 }
+
+.title-inner {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.movie-name {
+	margin: 0 auto 0 50px;
+}

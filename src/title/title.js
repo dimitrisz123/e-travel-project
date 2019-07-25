@@ -10,9 +10,11 @@ const Title = ({ title, movieTitleHandler, releaseDate, episodeNumber }) => {
 				movieTitleHandler(title);
 			}}
 		>
-			<span>EPISODE: {episodeNumber}</span>
-			<span>{title}</span>
-			<span>{releaseDate}</span>
+			<div className="title-inner">
+				<span>EPISODE: {episodeNumber}</span>
+				<span className="movie-name">{title}</span>
+				<span>{releaseDate}</span>
+			</div>
 		</button>
 	);
 };

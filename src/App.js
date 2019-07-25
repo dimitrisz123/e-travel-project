@@ -37,7 +37,9 @@ class App extends React.Component {
   };
 
   sortMoviesByYear = (a, b) => {
-    return a.fields.release_date - b.fields.release_date;
+    return (
+      a.fields.release_date.split("-")[0] - b.fields.release_date.split("-")[0]
+    );
   };
 
   sortMoviesByEpisode = (a, b) => {
