@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/e-travel-project/static/css/main.3aa3fb1d.chunk.css",
+    "main.js": "/e-travel-project/static/js/main.7a7bd434.chunk.js",
+    "main.js.map": "/e-travel-project/static/js/main.7a7bd434.chunk.js.map",
+    "runtime~main.js": "/e-travel-project/static/js/runtime~main.38376e4e.js",
+    "runtime~main.js.map": "/e-travel-project/static/js/runtime~main.38376e4e.js.map",
+    "static/js/2.65aa1cca.chunk.js": "/e-travel-project/static/js/2.65aa1cca.chunk.js",
+    "static/js/2.65aa1cca.chunk.js.map": "/e-travel-project/static/js/2.65aa1cca.chunk.js.map",
+    "index.html": "/e-travel-project/index.html",
+    "precache-manifest.43feb83d9cc373d50a8582208dbec2d5.js": "/e-travel-project/precache-manifest.43feb83d9cc373d50a8582208dbec2d5.js",
+    "service-worker.js": "/e-travel-project/service-worker.js",
+    "static/css/main.3aa3fb1d.chunk.css.map": "/e-travel-project/static/css/main.3aa3fb1d.chunk.css.map"
+  }
+}
