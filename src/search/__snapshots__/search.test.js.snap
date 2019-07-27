@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Search correctly 1`] = `
+<input
+  className="search"
+  onChange={[Function]}
+  placeholder="Search for movies"
+  type="text"
+/>
+`;

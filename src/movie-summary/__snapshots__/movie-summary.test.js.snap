@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MovieSummary correctly 1`] = `
+<div>
+  <div
+    className="summary-wrapper"
+    key="6"
+  >
+    <p
+      className="summary-title"
+    >
+      a new hope
+    </p>
+    <p
+      className="summary-opening_crawl"
+    >
+      a great movie
+    </p>
+    <p
+      className="summary-director"
+    >
+      Directed by: 
+      dim zer
+    </p>
+  </div>
+</div>
+`;

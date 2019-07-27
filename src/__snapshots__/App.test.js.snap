@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App correctly 1`] = `
+<div>
+  <div
+    className="header"
+  >
+    <Sorting
+      movieSortingHandler={[Function]}
+    />
+    <Search
+      movieSearchHandler={[Function]}
+    />
+  </div>
+  <div
+    className="main-app"
+  >
+    <TitleList
+      filteredTitle={Array []}
+      movieTitleHandler={[Function]}
+    />
+    <MovieSummary
+      noDetails={true}
+    />
+  </div>
+</div>
+`;

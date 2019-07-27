@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TitleList correctly 1`] = `
+<div
+  className="title-list"
+>
+  <Title
+    episodeNumber="1"
+    key="1"
+    releaseDate="18-7-1999"
+    title="a new hope"
+  />
+</div>
+`;

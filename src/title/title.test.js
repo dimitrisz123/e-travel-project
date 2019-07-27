@@ -2,9 +2,9 @@ import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
-import App from "./App";
+import Title from "./title";
 
-it("renders App correctly", () => {
-	const wrapper = shallow(<App />);
+it("renders Title correctly", () => {
+	const wrapper = shallow(<Title />);
 	expect(toJson(wrapper)).toMatchSnapshot();
 });

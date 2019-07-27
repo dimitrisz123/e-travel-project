@@ -13,9 +13,14 @@ const MovieSummary = ({ details, noDetails }) => {
 		return (
 			<div>
 				{details.map(info => {
-					const { title, opening_crawl, director } = info.fields;
+					const {
+						title,
+						opening_crawl,
+						director,
+						episode_id
+					} = info.fields;
 					return (
-						<div className="summary-wrapper" key={info.id}>
+						<div className="summary-wrapper" key={episode_id}>
 							<p className="summary-title">{title}</p>
 							<p className="summary-opening_crawl">
 								{opening_crawl}

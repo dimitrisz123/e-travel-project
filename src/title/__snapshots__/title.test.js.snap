@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Title correctly 1`] = `
+<button
+  className="title"
+  onClick={[Function]}
+>
+  <div
+    className="title-inner"
+  >
+    <span>
+      EPISODE: 
+    </span>
+    <span
+      className="movie-name"
+    />
+    <span />
+  </div>
+</button>
+`;

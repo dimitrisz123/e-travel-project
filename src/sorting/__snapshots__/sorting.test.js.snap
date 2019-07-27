@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Sorting correctly 1`] = `
+<select
+  className="sorting"
+  id="sort-by"
+  onChange={[Function]}
+>
+  <option
+    value=""
+  >
+    Sort By
+  </option>
+  <option
+    value="episode"
+  >
+    Episode
+  </option>
+  <option
+    value="year"
+  >
+    Year
+  </option>
+</select>
+`;
