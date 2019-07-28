@@ -25,3 +25,15 @@ exports[`renders MovieSummary correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`renders MovieSummary correctly 2`] = `
+<div
+  className="summary-wrapper-default"
+>
+  <p
+    className="summary-default"
+  >
+    No Movies Selected
+  </p>
+</div>
+`;

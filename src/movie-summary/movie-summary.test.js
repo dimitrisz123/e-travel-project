@@ -17,4 +17,7 @@ it("renders MovieSummary correctly", () => {
 	];
 	const wrapper = shallow(<MovieSummary details={details} />);
 	expect(toJson(wrapper)).toMatchSnapshot();
+	const wrapper2 = shallow(<MovieSummary noDetails />);
+	expect(toJson(wrapper2)).toMatchSnapshot();
 });
+
